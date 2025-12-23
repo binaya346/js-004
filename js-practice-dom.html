@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>Count: <span id="count"></span></div>
+    <label>Enter Your email address: </label>
+    <input type="text" name="email" placeholder="Enter Your email" id="email" />
+    <button id="increase-btn">Increase</button>
+    <button id="decrease-btn">Decrease</button>
+    <div>Output: <span id="output"></span></div>
+    <button id="add-menu">Add menu</button>
+    <script>
+        let count_value = 0;
+        const countElement = document.querySelector("#count");
+        const increaseElement = document.querySelector("#increase-btn");
+        const decreaseElement = document.querySelector("#decrease-btn");
+        const emailInputElement = document.querySelector("#email")
+        const outputElement = document.querySelector("#output");
+        const addMenuElement = document.querySelector("#add-menu");
+
+        const handleDecreseElement = (event) => {
+            count_value = count_value - 1;
+            countElement.textContent = count_value;
+        }
+
+        const handleIncreaseElement = (event) => {
+            count_value = count_value + 1;
+            countElement.textContent = count_value;
+        }
+
+        const handleInput = (event) => {
+            console.log(event.target.value)
+            console.log(event.target.name)
+            outputElement.textContent = event.target.value;
+            increaseElement.removeEventListener("click", handleIncreaseElement)
+        }
+
+        increaseElement.addEventListener("click", handleIncreaseElement)
+
+        decreaseElement.addEventListener("click", handleDecreseElement)
+
+        emailInputElement.addEventListener("input", handleInput)
+
+        addMenuElement.addEventListener("click", addElementDynamically)
+
+        // Adding node dynamically. 
+
+        function addElementDynamically() {
+            const ul = document.createElement("ul");
+
+            const liFirst = document.createElement('li');
+            const liSecond = document.createElement('li');
+            const liThird = document.createElement('li');
+
+            const anchor = document.createElement("a")
+            const anchorSecond = document.createElement("a")
+            const anchorTHird = document.createElement("a")
+
+            anchor.textContent = "Home"
+            anchorSecond.textContent = "Contact"
+            anchorTHird.textContent = "About"
+
+
+            liFirst.appendChild(anchor);
+            liSecond.appendChild(anchorSecond);
+            liThird.appendChild(anchorTHird)
+
+            ul.appendChild(liFirst);
+            ul.appendChild(liSecond);
+            ul.appendChild(liThird)
+
+            console.log(ul)
+            outputElement.appendChild(ul)
+
+        }
+
+    </script>
+</body>
+
+</html>

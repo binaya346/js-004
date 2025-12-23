@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable, datatype, operator</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a class="anchor" id="home">
+                        Home
+                    </a>
+
+                </li>
+                <li>
+                    <a name="techaxis" id="contact">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <aside>
+
+        </aside>
+        <section>
+
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script>
+
+        // Grab the item
+        // let home = document.getElementById("home")
+        // let anchor = document.getElementsByClassName("anchor")
+        // let anchor = document.getElementsByName("techaxis")
+        // let anchor = document.getElementsByTagName("a")
+
+        let home = document.querySelector("#home");
+        // let home = document.querySelectorAll(".anchor");
+        // let home = document.querySelector("nav");
+        // let home = document.querySelector("input[type='text']");
+        // let home = document.querySelector("input[name='password']");
+        
+        console.log(anchor)
+
+        // // let home = document.getElementById("home")
+        // let home = document.getElementById("home")
+        let contact = document.getElementById("contact")
+        console.log(home)
+        console.log(contact)
+
+        // Add event listener
+        home.addEventListener("click", (event) => {
+            home.textContent = "My Home"
+            home.style.color = "blue"
+            home.style.fontSize = "40px"
+        })
+
+    </script>
+</body>
+
+</html>
