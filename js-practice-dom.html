@@ -15,6 +15,7 @@
     <button id="decrease-btn">Decrease</button>
     <div>Output: <span id="output"></span></div>
     <button id="add-menu">Add menu</button>
+
     <script>
         let count_value = 0;
         const countElement = document.querySelector("#count");
@@ -42,15 +43,11 @@
         }
 
         increaseElement.addEventListener("click", handleIncreaseElement)
-
         decreaseElement.addEventListener("click", handleDecreseElement)
-
         emailInputElement.addEventListener("input", handleInput)
-
         addMenuElement.addEventListener("click", addElementDynamically)
 
         // Adding node dynamically. 
-
         function addElementDynamically() {
             const ul = document.createElement("ul");
 
