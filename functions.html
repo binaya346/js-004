@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+
+<body>
+    A complex problem
+    Get input from user, validate the input,
+    send the data to server,
+    receive response from server,
+    show output to user according to response from server.
+
+    1. take input from user: handleInputs
+    2. validate the user input: handleInputValidation
+    3. send the data to server & get response: handlePostRequest
+    4. Output to user according to response: renderResponseToUser
+
+    # Modular
+    # Readable
+    # Reusable
+    # Maintainable
+
+    # Accepts input, can return output.
+
+
+    <script>
+
+        function add(x, y) {
+            const result = x + y;
+            return result;
+        }
+
+        // function printer(name, address, age) {
+        //     // console.log(``)
+        //     // const printing_statement = "My name is " + name;
+        //     // Templating 
+        //     const printing_statement = `My name is ${name}. I live in ${address}. My age is ${age}`
+
+        //     console.log(printing_statement)
+        // }
+
+        // add => function reference
+        // add() => function call
+
+        // add(10, 5);
+        // add(8, 4);
+        // printer("Binaya", "balkot", 30)
+        // printer("Sachin", "Kathmandu", 24)
+        // printer("Avinas", "bhaktapur")
+
+        const response = add(10, 5)
+        console.log(response)
+
+        printer("Binaya", "balkot", 30, "9842703905")
+
+        function printer(name, phone, ...rest) {
+            // const printing_statement = `My name is ${name}. I live in ${address}. My age is ${age}`
+            // console.log(printing_statement)
+            console.log(name)
+            console.log(rest)
+        }
+
+
+        //  Arrow function
+        const addition = (x, y) => x + y
+
+        const hello = () => {
+            console.log("Hello")
+        }
+
+        console.log(addition(5, 10))
+
+        const person2 = {
+            name: "binaya",
+            greet: function () {
+                console.log("Hello " + this.name)
+            }
+        }
+
+        const person = {
+            name: "binaya",
+            greet: () => {
+                console.log("Hello " + this.name)
+            }
+        }
+
+        person.greet()
+
+        //  Default parameter
+        const address = "Kathmandu"
+
+        const print = (name = "Binaya") => {
+            //  Blocked scope, or functional scope
+            // const address = "Balkot"
+            console.log(" My Name is: " + name + " And address is " + address)
+        }
+
+        print()
+        console.log(address)
+
+
+
+    </script>
+
+</body>
+
+</html>
