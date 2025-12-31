@@ -34,6 +34,7 @@ const handleSubmit = (event) => {
     const isFormValidated = handleValidation()
     if (isFormValidated) {
         alert("Form submitted");
+        removeEventListner();
     } else {
         errorField.textContent = inputValues.error;
         errorField.style.color = "red"
@@ -65,9 +66,16 @@ const handleValidation = () => {
     return true;
 }
 
+const removeEventListner = () => {
+    usernameField.removeEventListener(handleInput)
+    passwordField.removeEventListener(handleInput)
+    email.removeEventListener(handleInput)
+    passwordRetype.removeEventListener(handleInput)
+    button.removeEventListener(handleSubmit)
+}
+
 usernameField.addEventListener("input", handleInput)
 passwordField.addEventListener("input", handleInput)
 email.addEventListener("input", handleInput)
 passwordRetype.addEventListener("input", handleInput)
-
 button.addEventListener("click", handleSubmit)

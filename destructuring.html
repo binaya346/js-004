@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+
+<body>
+    <h1>Simplifying object and array manipulation</h1>
+
+    <script>
+        const body = {
+            firstname: "Binaya",
+            lastname: "rijal",
+            email: "rijalbinaya@gamil.com",
+            gender: "Male",
+            phone: "9842703905"
+        }
+
+        // Destructuring
+        const { phone, firstname, lastname, email, gender } = body;
+
+        // spread operator (...)
+        const header = { ...body, firstname: "New user", phone: "99999999", isActive: true }
+        console.log(header)
+
+        const fruits = ["apple", "mango", "pineapple"]
+        const newFruits = [...fruits, "papaya"]
+        fruits[0] = "banana"
+        console.log(newFruits)
+
+    </script>
+</body>
+
+</html>

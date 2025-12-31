@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+
+<body>
+
+    <script>
+        //   Object Creation: Three Distinct Methods
+        //  Object Literals
+        // const person = {
+        //     name: "binaya",
+        //     address: "balkot",
+        //     age: 30
+        // }
+
+        function Person(name, address, age) {
+            this.name = name;
+            this.address = address;
+            this.age = age;
+        }
+
+        const person1 = new Person("binaya", "balkot", 30)
+        const person2 = new Person("sachin", "kathmandu", 30)
+        const person3 = new Person("sachin", "kathmandu", 30)
+
+
+        const carPrototype = {
+            drive: function () {
+                console.log("Moving...");
+            },
+            model: "xyz"
+        };
+
+        const myCar = Object.create(carPrototype);
+
+        myCar.brand = "Tesla";
+        // myCar now has access to .drive() through the prototype chain.
+
+
+        const course = {
+            title: "MERN Stack",
+            details: {
+                duration: "3 Months",
+                instructor: {
+                    name: "Kesara",
+                    role: "Lead"
+                }
+            }
+        };
+
+        // console.log(course?.details?.instructor?.role)
+
+        // Higher order functions
+        // forEach, map, filter, reduce, find, some, every
+
+        const array = [
+            { name: "cow", type: "animal" },
+            { name: "grapes", type: "fruits" },
+            { name: "papaya", type: "fruits" },
+            { name: "elephant", type: "animal" },
+            { name: "crow", type: "bird" },
+        ]
+
+        const numbers = ["a", "b", "c", "d", "e", "f"]
+
+        // array.forEach((item, index) => {
+        //     console.log(item.name)
+        //     console.log(index)
+        // })
+
+        // array.map((value, index) => {
+        //     console.log(value.name)
+        //     console.log(index)
+        // })
+
+        // const output = array.filter(item => item.type == "fruits")
+        // console.log(output)
+
+        // const output = numbers.reduce((sum, value) => sum = sum + value, 0)
+        // console.log(output)
+
+        // const output = array.find(item => item.type == "fruits")
+        // console.log(output)
+
+        // const output = array.some(item => item.type == "bird")
+        // console.log(output)
+
+        // const output = array.every(item => item.type == "bird")
+        // console.log(output)
+
+
+
+    </script>
+</body>
+
+</html>
