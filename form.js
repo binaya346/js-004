@@ -11,6 +11,7 @@ const inputValues = {
     password: "",
     retypePassword: "",
     email: "",
+    address:"",
     error: ""
 }
 // Rules
@@ -69,5 +70,8 @@ usernameField.addEventListener("input", handleInput)
 passwordField.addEventListener("input", handleInput)
 email.addEventListener("input", handleInput)
 passwordRetype.addEventListener("input", handleInput)
+address.addEventListener("input", handleInput)
+
 
 button.addEventListener("click", handleSubmit)
+
